@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/Desktop/GTFS/tools/tools.sh
+source ~/gtfs_tools/tools.sh
 
 _get_route_ids() {
     echo $2
