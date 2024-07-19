@@ -7,5 +7,6 @@ _get_route_ids() {
     }
 
 _get_trips() {
-    grep ^${2}, ${1}/trips.txt | split -n r/1/${3}
+    SKIP="${3:-1}"
+    grep ^${2}, ${1}/trips.txt | split -n r/1/${SKIP}
     }
