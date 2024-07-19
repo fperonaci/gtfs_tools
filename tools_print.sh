@@ -1,12 +1,12 @@
 #!/bin/bash
 
 print_one_trip() {
-  source ~/Desktop/GTFS/tools/tools_trips.sh
+  source ~/Desktop/GTFS/tools/tools_tripid.sh
   _print $@
   }
 
 print_one_route() {
-  source ~/Desktop/GTFS/tools/tools_routes.sh
+  source ~/Desktop/GTFS/tools/tools_routeid.sh
   _print $@
   }
 
