@@ -3,13 +3,13 @@
 source ~/gtfs_tools/common.sh
 
 _get_route_ids() {
-    get_trips $@ | tail -n+2 | cut -d, -f1 | awk '!seen[$0]++'
+    _use_service_get_route_ids $@
     }
 
 _get_service_ids() {
-    echo $2
+    _use_service_get_service_ids $@
     }
 
 _get_trips() {
-    awk -F, -vsearch="${2}" '$2 == search' ${1}/trips.txt
+    _use_service_get_trips $@
     }
