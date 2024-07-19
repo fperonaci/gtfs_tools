@@ -2,12 +2,12 @@
 
 print_one_trip() {
   source ~/Desktop/GTFS/tools/tools_trips.sh
-  print $@
+  _print $@
   }
 
 print_one_route() {
   source ~/Desktop/GTFS/tools/tools_routes.sh
-  print $@
+  _print $@
   }
 
 _print() {

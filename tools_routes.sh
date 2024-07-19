@@ -1,8 +1,5 @@
 #!/bin/bash
 
-source ~/Desktop/GTFS/tools/core.sh
-source ~/Desktop/GTFS/tools/headers.sh
-source ~/Desktop/GTFS/tools/ids.sh
 source ~/Desktop/GTFS/tools/tools.sh
 
 get_route_ids() {

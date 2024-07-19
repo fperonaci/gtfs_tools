@@ -1,5 +1,10 @@
 #!/bin/bash
 
+source ~/Desktop/GTFS/tools/_core.sh
+source ~/Desktop/GTFS/tools/_ids.sh
+
+source ~/Desktop/GTFS/tools/headers.sh
+
 get_agencies() {
     print_header_agencies $1
     _get_agencies $@
