@@ -73,41 +73,73 @@ get_trip_ids() {
     }
 
 get_agencies() {
-    head -n1 ${1}/agency.txt
+    print_header_agencies $1
     _get_agencies $@
     }
 
 get_calendars() {
-    head -n1 ${1}/calendar.txt
+    print_header_calendars $1
     _get_calendars $@
     }
 
 get_calendar_dates() {
-    head -n1 ${1}/calendar_dates.txt
+    print_header_calendar_dates $1
     _get_calendar_dates $@
     }
 
 get_routes() {
-    head -n1 ${1}/routes.txt
+    print_header_routes $1
     _get_routes $@
     }
 
 get_shapes() {
-    head -n1 ${1}/shapes.txt
+    print_header_shapes $1
     _get_shapes $@
     }
 
 get_stops() {
-    head -n1 ${1}/stops.txt
+    print_header_stops $1
     _get_stops $@
     }
 
 get_stop_times() {
-    head -n1 ${1}/stop_times.txt
+    print_header_stop_times $1
     _get_stop_times $@
     }
 
 get_trips() {
-    head -n1 ${1}/trips.txt
+    print_header_trips $1
     _get_trips $@
+    }
+
+print_header_agencies() {
+    head -n1 ${1}/agency.txt
+    }
+
+print_header_calendars() {
+    head -n1 ${1}/calendar.txt
+    }
+
+print_header_calendar_dates() {
+    head -n1 ${1}/calendar_dates.txt
+    }
+
+print_header_routes() {
+    head -n1 ${1}/routes.txt
+    }
+
+print_header_shapes() {
+    head -n1 ${1}/shapes.txt
+    }
+
+print_header_stops() {
+    head -n1 ${1}/stops.txt
+    }
+
+print_header_stop_times() {
+    head -n1 ${1}/stop_times.txt
+    }
+
+print_header_trips() {
+    head -n1 ${1}/trips.txt
     }
