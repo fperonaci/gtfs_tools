@@ -2,7 +2,7 @@
 
 source ~/Desktop/GTFS/tools/tools.sh
 
-get_route_ids() {
+_get_route_ids() {
     echo $2
     }
 
