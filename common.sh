@@ -6,4 +6,3 @@ source ~/gtfs_tools/_headers.sh
 source ~/gtfs_tools/_print.sh
 source ~/gtfs_tools/_gets.sh
 source ~/gtfs_tools/_ext.sh
-source ~/gtfs_tools/_use.sh
