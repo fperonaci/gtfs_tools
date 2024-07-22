@@ -24,6 +24,7 @@ put_together() {
   _get_header_stop_times ${1} > ${2}/stop_times.txt
   _get_header_trips ${1} > ${2}/trips.txt
   for d in ${folders[@]}; do
+    echo ${d}
     tail -n+2 ${d}/agency.txt >> ${2}/agency.txt
     tail -n+2 ${d}/calendar.txt >> ${2}/calendar.txt
     tail -n+2 ${d}/calendar_dates.txt >> ${2}/calendar_dates.txt
@@ -33,4 +34,12 @@ put_together() {
     tail -n+2 ${d}/stop_times.txt >> ${2}/stop_times.txt
     tail -n+2 ${d}/trips.txt >> ${2}/trips.txt
   done
+  awk -i inplace '!seen[$0]++' ${2}/agency.txt
+  awk -i inplace '!seen[$0]++' ${2}/calendar.txt
+  awk -i inplace '!seen[$0]++' ${2}/calendar_dates.txt
+  awk -i inplace '!seen[$0]++' ${2}/routes.txt
+  awk -i inplace '!seen[$0]++' ${2}/shapes.txt
+  awk -i inplace '!seen[$0]++' ${2}/stops.txt
+  awk -i inplace '!seen[$0]++' ${2}/stop_times.txt
+  awk -i inplace '!seen[$0]++' ${2}/trips.txt
   }
