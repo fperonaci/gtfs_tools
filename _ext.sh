@@ -10,3 +10,11 @@ add_validity() {
       echo ${trip},${dates[0]},${stimes[0]},${stimes[-1]}
     done
     }
+
+add_parent_station() {
+    mapfile -t stops < <( cat )
+    for stop in "${stops[@]}"; do
+      parent_stop_id=$(echo ${stop} | cut -d, -f 11)
+      grep ^${parent_stop_id}, ${1}/stops.txt
+    done
+    }
