@@ -1,5 +1,12 @@
 #!/bin/bash
 
+print_many() {
+  mapfile -t many < <( cat )
+  for m in ${many[@]}; do
+    print_one ${1} ${m}
+  done;
+  }
+
 print_one() {
   mkdir -p ${2}
   get_agencies $@ | tee ${2}/agency.txt
