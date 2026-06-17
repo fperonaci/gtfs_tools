@@ -1,7 +1,7 @@
 #!/bin/bash
 
 add_validity() {
-    source ~/gtfs_tools/use_tripid.sh
+    source ~/gtfs_tools/source/use_tripid.sh
     mapfile -t trips < <( cat )
     for trip in "${trips[@]}"; do
       id=$(echo ${trip} | cut -d, -f 2)
