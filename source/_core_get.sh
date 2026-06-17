@@ -44,6 +44,6 @@ _get_stop_times() {
 
 _get_trips() {
     for id in $(_get_trip_ids $@)
-      do awk -F, -vsearch="${id}" '$3 == search' ${1}/trips.txt
+      do awk -F, -vsearch="${id}" '$2 == search' ${1}/trips.txt
     done
     }
